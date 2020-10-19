@@ -14,6 +14,36 @@
           tempora. Voluptates consequatur tenetur perferendis necessitatibus quam odit, ipsam dolorum aliquid omnis?
            Sed, magnam blanditiis? Assumenda 
         a, consectetur suscipit unde corporis modi nesciunt eius eligendi nemo at ut tempore harum autem sequi?</p>
-
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+        <form id="hello">
+			<input type="text" name="text" id="inputText"/>
+        	<button onclick="pushData();">Show</button>
+		</form>
+        
+        <p id="pText"></p>
+        
+        <script>
+            $(document).on('submit','#hello',function (e) {
+				e.preventDefault()
+			})
+            // create an array
+            var myArr = ["A","B","C","D"];
+            
+            function pushData()
+            {
+                // get value from the input text
+                var inputText = document.getElementById('inputText').value;
+                
+                // append data to the array
+                myArr.push(inputText);
+                
+				console.log(myArr);
+				
+                var inputText = document.getElementById('inputText').value = '';
+                
+			}
+            
+        </script>
 </body>
 </html>
